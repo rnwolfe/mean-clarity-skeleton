@@ -1,0 +1,47 @@
+<div class="alert-container">
+
+  <div class="alert alert-danger" *ngFor="let alert of errorAlerts">
+      <div class="alert-items">
+          <div class="alert-item static">
+              <div class="alert-icon-wrapper">
+                  <clr-icon class="alert-icon" shape="exclamation-circle"></clr-icon>
+              </div>
+              <span class="alert-text">{{ alert }}</span>
+          </div>
+      </div>
+  </div>
+
+  <div class="alert alert-warning" *ngFor="let alert of warningAlerts">
+      <div class="alert-items">
+          <div class="alert-item static">
+              <div class="alert-icon-wrapper">
+                  <clr-icon class="alert-icon" shape="exclamation-triangle"></clr-icon>
+              </div>
+              <span class="alert-text">{{ alert }}</span>
+          </div>
+      </div>
+  </div>
+
+  <div class="alert alert-success" *ngFor="let alert of successAlerts">
+      <div class="alert-items">
+          <div class="alert-item static">
+              <div class="alert-icon-wrapper">
+                  <clr-icon class="alert-icon" shape="check-circle"></clr-icon>
+              </div>
+              <span class="alert-text">{{ alert }}</span>
+          </div>
+      </div>
+  </div>
+
+  <div class="alert alert-info" *ngFor="let alert of infoAlerts">
+      <div class="alert-items">
+          <div class="alert-item static">
+              <div class="alert-icon-wrapper">
+                  <clr-icon class="alert-icon" shape="info-circle"></clr-icon>
+              </div>
+              <span class="alert-text">{{ alert }}</span>
+          </div>
+      </div>
+  </div>
+
+</div>

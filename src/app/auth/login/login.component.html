@@ -1,0 +1,17 @@
+<div class="login-wrapper">
+  <form class="login" (submit)="onLogin(loginForm)" #loginForm="ngForm" *ngIf="!isLoading">
+    <section class="title">
+      <h3 class="welcome">Welcome to</h3>
+      <span style="line-height:45px;">Your App</span>
+    </section>
+    <div class="login-group" *ngIf="!isLoading">
+      <input class="username" type="text" name="username" placeholder="Username" ngModel #usernameInput="ngModel" required>
+      <input class="password" type="password" name="password" placeholder="Password" ngModel #passwordInput="ngModel" required>
+      <div class="error active" *ngIf="(usernameInput.invalid && usernameInput.dirty) || (passwordInput.invalid && passwordInput.dirty)">
+        Please enter a username and password.
+      </div>
+      <button type="submit" class="btn btn-primary">NEXT</button>
+    </div>
+    <span class="spinner" *ngIf="isLoading">Loading...</span>
+  </form>
+</div>

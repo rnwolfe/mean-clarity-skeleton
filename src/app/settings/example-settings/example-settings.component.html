@@ -1,0 +1,35 @@
+<app-settings-nav></app-settings-nav>
+
+<div class="content-container">
+  <div class="content-area">
+    <h2>Example Settings</h2>
+    <form [formGroup]="form" (submit)="onSave()" class="clr-form clr-form-horizontal">
+      <clr-input-container>
+        <label>Server</label>
+        <input clrInput type="text" placeholder="IP or hostname" formControlName="server">
+        <clr-control-helper>The IP address or hostname of the server.</clr-control-helper>
+        <clr-control-error *clrIfError="'required'">Field is required!</clr-control-error>
+      </clr-input-container>
+      <clr-input-container>
+        <label>Port</label>
+        <input clrInput type="text" placeholder="Port #" formControlName="port">
+        <clr-control-helper>The port used for the server. Default port used is 9060.</clr-control-helper>
+        <clr-control-error *clrIfError="'required'">Field is required!</clr-control-error>
+        <clr-control-error *clrIfError="'min'">Port is not in the range 0 to 65535!</clr-control-error>
+        <clr-control-error *clrIfError="'max'">Port is not in the range 0 to 65535!</clr-control-error>
+      </clr-input-container>
+      <clr-input-container>
+        <label>Username</label>
+        <input clrInput type="text" placeholder="Username" formControlName="username">
+        <clr-control-helper>This user should have the appropriate permissions to the server.</clr-control-helper>
+        <clr-control-error *clrIfError="'required'">Field is required!</clr-control-error>
+      </clr-input-container>
+      <clr-input-container>
+        <label>Password</label>
+        <input clrInput type="password" placeholder="Password" formControlName="password">
+        <clr-control-error *clrIfError="'required'">Field is required!</clr-control-error>
+      </clr-input-container>
+      <button type="submit" class="btn btn-primary" style="margin-top: 1rem">SAVE</button>
+    </form>
+  </div>
+</div>
