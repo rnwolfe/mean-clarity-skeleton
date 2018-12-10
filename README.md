@@ -95,14 +95,9 @@ export const routes: Routes = [
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'settings', redirectTo: 'settings/example', pathMatch: 'full', canActivate: [AuthGuard] },
   { path: 'settings/example', component: ExampleSettingsComponent, canActivate: [AuthGuard] },
-  // Uncomment these 3 lines, and comment out the following 3 lines to enforce authentication
-  // (This should be done after creating your first user in the skeleton app.)
-  // { path: 'settings/users', component: UserListComponent, canActivate: [AuthGuard] },
-  // { path: 'settings/users/create', component: UserCreateComponent, canActivate: [AuthGuard] },
-  // { path: 'settings/users/edit/:userId', component: UserCreateComponent, canActivate: [AuthGuard] },
-  { path: 'settings/users', component: UserListComponent },
-  { path: 'settings/users/create', component: UserCreateComponent },
-  { path: 'settings/users/edit/:userId', component: UserCreateComponent },
+  { path: 'settings/users', component: UserListComponent, canActivate: [AuthGuard] },
+  { path: 'settings/users/create', component: UserCreateComponent, canActivate: [AuthGuard] },
+  { path: 'settings/users/edit/:userId', component: UserCreateComponent, canActivate: [AuthGuard] },
 ];
 ```
 
